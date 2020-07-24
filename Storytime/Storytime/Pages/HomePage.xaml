@@ -1,0 +1,116 @@
+﻿<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Storytime.HomeView">
+    <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <Image Source="background.png" 
+                     AbsoluteLayout.LayoutBounds="0, 0, 1, 1" 
+                     AbsoluteLayout.LayoutFlags="All" 
+                     Aspect="AspectFill"/>
+
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All" Margin="40">
+            <Frame Padding="25" BackgroundColor="#001158" CornerRadius="20">
+                <StackLayout>
+                    <Label FontSize="24"
+                                       Text="Privacyverklaring"
+                                       TextColor="Black"
+                           FontAttributes="Bold"
+                                       />
+                    <Frame Padding="2" BackgroundColor="LightBlue">
+                        <ScrollView>
+                            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="EndAndExpand">
+                                <Label LineBreakMode="WordWrap" FontSize="12" TextColor="Black" HorizontalOptions="FillAndExpand">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span>
+                                                <Span.Text>
+                                                    In ons privacybeleid wordt uitgelegd welke gegevens we van je verzamelen, waarom we deze gegevens verzamelen, en hoe we deze gegevens gebruiken. Dit privacybeleid is onderdeel van onze gebruiksvoorwaarden.
+                                                </Span.Text>
+                                            </Span>
+                                            <Span Text="&#10;&#10;Kinderverhalen App&#10;" FontSize="18" FontAttributes="Bold"/>
+                                            <Span>
+                                                <Span.Text>
+                                                    De Kinderverhalen app heeft als doel om cliënten te ondersteunen bij het vastleggen van momenten. Deze momenten geven u en eventueel uw behandelaar inzicht in uw probleem, en kunnen helpen bij de behandeling hiervan.
+                                                </Span.Text>
+                                            </Span>
+                                            <Span Text="&#10;&#10;Welke gegevens we verzamelen en hoe we deze gebruiken&#10;" FontSize="18" FontAttributes="Bold"/>
+                                            <Span>
+                                                <Span.Text>
+                                                    De Kinderverhalen App verzamelt gegevens om onze services te kunnen leveren, onderhouden en verbeteren. We gebruiken deze gegevens ook om gepersonaliseerde inhoud aan u te leveren, zoals inzichten, tips en suggesties voor relevante sessies. We kunnen uw voor- en achternaam gebruiken in alle services die we aanbieden waarvoor een Kinderverhalen-account is vereist.
+De volgende gegevens worden in de app gebruikt:
+                                                </Span.Text>
+                                            </Span>
+                                            <Span Text="&#10;Accountgegevens&#10;" FontSize="12" FontAttributes="Bold"/>
+                                            <Span>
+                                                <Span.Text>
+                                                    •	In de Kinderverhalen App logt u in met het bestaande account van uw instelling. Hiervoor zijn uw e-mailadres en wachtwoord nodig.
+•	In de app wordt uw naam getoond.
+                                                </Span.Text>
+                                            </Span>
+                                            <Span Text="&#10;Gebruikersgegevens&#10;" FontSize="12" FontAttributes="Bold"/>
+                                            <Span>
+                                                <Span.Text>
+                                                    Gebruikersgegevens omvatten de momenten die u in het dagboek vastlegt, zowel via de app als via de webapplicatie. Hierin kunnen zijn opgenomen:
+•	Emotie en intensiteit
+•	Omschrijving situatie
+•	Foto’s
+                                                </Span.Text>
+                                            </Span>
+                                            <Span Text="&#10;Gebruiksgegevens&#10;" FontSize="12" FontAttributes="Bold"/>
+                                            <Span>
+                                                <Span.Text>
+                                                    We verzamelen gegevens over het gebruikt van de app om deze te kunnen verbeteren. Apparaatgegevens
+•	Apparaatspecifieke gegevens zoals het hardwaremodel en de versie van het besturingssysteem worden gebruik om inzicht te krijgen in met welke hardware en software de app gebruikt wordt.
+•	Het unieke apparaat ID wordt gebruikt om u als gebruiker te authenticeren. Als uw apparaat vermist of gestolen is kunt u de toegang tot uw account via de app altijd via de webapplicatie ontzeggen.
+
+                                                </Span.Text>
+                                            </Span>
+                                            <Span Text="&#10;Logbestandsgegevens&#10;" FontSize="12" FontAttributes="Bold"/>
+                                            <Span>
+                                                <Span.Text>
+                                                    Wanneer u onze services gebruikt of inhoud bekijkt die wordt geleverd door Kinderverhalen, kunnen we automatisch bepaalde gegevens in logbestanden verzamelen en opslaan. Deze gegevens kunnen het volgende omvatten:
+•	Details over hoe u onze service heeft gebruikt.
+•	Gegevens over apparaatgebeurtenissen, zoals crashes, systeemactiviteit en de datum en tijd van activiteit.
+                                                </Span.Text>
+                                            </Span>
+                                            <Span Text="&#10;Unieke applicatienummers&#10;" FontSize="12" FontAttributes="Bold"/>
+                                            <Span>
+                                                <Span.Text>
+                                                    •	De Kinderverhalen App bevat een applicatienummer. Dit nummer en informatie over uw installatie (bijvoorbeeld het type besturingssysteem en het versienummer van de applicatie) kunnen naar Kinderverhalen worden verzonden wanneer u de app installeert of verwijdert of wanneer de app periodiek controleert op updates.
+                                                </Span.Text>
+                                            </Span>
+                                            <Span Text="&#10;Lokale opslag (cache)&#10;" FontSize="12" FontAttributes="Bold"/>
+                                            <Span>
+                                                <Span.Text>
+                                                    •	We kunnen gegevens lokaal opslaan op uw apparaat om content sneller te laden.
+                                                </Span.Text>
+                                            </Span>
+                                            <Span Text="&#10;&#10;Hoe we gegevens beveiligen&#10;" FontSize="18" FontAttributes="Bold"/>
+                                            <Span>
+                                                <Span.Text>
+                                                    We werken er hard aan Kinderverhalen en onze gebruikers te beschermen tegen ongeautoriseerde toegang tot of ongeautoriseerde aanpassing, openbaarmaking of vernietiging van gegevens die in ons bezit zijn.
+                                                </Span.Text>
+                                            </Span>
+                                            <Span Text="&#10;&#10;Wijzigingen&#10;" FontSize="18" FontAttributes="Bold"/>
+                                            <Span>
+                                                <Span.Text>
+                                                    Ons privacybeleid kan worden gewijzigd. We beperken uw rechten onder dit privacybeleid niet zonder uw uitdrukkelijke toestemming. We zullen alle wijzigingen van het privacybeleid op deze pagina aangeven en, als de wijzigingen aanzienlijk zijn, zullen we zorgen voor een meer opvallende kennisgeving.
+                                                </Span.Text>
+                                            </Span>
+
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+
+                            </StackLayout>
+                        </ScrollView>
+                    </Frame>
+
+                    <Button Text="Akkoord"
+                            BackgroundColor="#ffffff" 
+                            HorizontalOptions="FillAndExpand"
+                            Clicked="OnButtonClicked" />
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </AbsoluteLayout>
+</ContentView>

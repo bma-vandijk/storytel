@@ -1,0 +1,31 @@
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Storytime"
+             x:Class="Storytime.StartView">
+    <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        
+        <ImageButton Source="background.png" 
+                     AbsoluteLayout.LayoutBounds="0, 0, 1, 1" 
+                     AbsoluteLayout.LayoutFlags="All" 
+                     Aspect="AspectFill"
+                     Clicked="OnClicked"></ImageButton>
+
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All" InputTransparent="True">
+            <Label Text="Sammy" TextColor="White" FontSize = "40" HorizontalOptions="Center"/>
+        </StackLayout>
+
+        <RelativeLayout Margin="20" VerticalOptions="End" HorizontalOptions="Center" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All" InputTransparent="True">
+            <Label Text="Tik op het schem om te beginnen!" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+        </RelativeLayout>
+
+        <RelativeLayout Margin="10" VerticalOptions="Start" HorizontalOptions="End" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+            <ImageButton Source="parentbutton2.png"
+                         HeightRequest="32"
+                         WidthRequest="32"
+                         BorderColor="Transparent"
+                         BackgroundColor="Transparent"
+                         Clicked="OnParentClicked"></ImageButton>
+        </RelativeLayout>
+
+    </AbsoluteLayout>
+</ContentView>

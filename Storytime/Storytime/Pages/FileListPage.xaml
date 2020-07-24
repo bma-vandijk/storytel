@@ -1,0 +1,74 @@
+﻿<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Storytime"
+             x:Class="Storytime.FileListView"
+             xmlns:mvvm="clr-namespace:Storytime.MVVM">
+    <ContentPage.BindingContext>
+        <mvvm:FileListVM/>
+    </ContentPage.BindingContext>
+
+    <AbsoluteLayout Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+        <Image Source="background.png" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All" Aspect="AspectFill"></Image>
+
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All" Margin="40">
+            <Frame Padding="50" BackgroundColor="DarkCyan" CornerRadius="20">
+                <Frame Padding="2" BackgroundColor="LightBlue">
+                    <!-- <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="Blue">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Button Grid.Row="0" Command="{Binding Record}" Text="{Binding RecordText}" HorizontalOptions="Center"/>
+                </Grid> -->
+
+
+                    <ListView x:Name="FileList"
+                            ItemTapped="OnItemTapped"
+                            ItemsSource="{Binding Files}"
+                            RefreshCommand="{Binding Refresh}"
+                            IsPullToRefreshEnabled="True"
+                            VerticalOptions ="FillAndExpand"
+                            HasUnevenRows="True"
+                            WidthRequest="360"
+                            HeightRequest="800">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout BackgroundColor="#eee"
+                                         Orientation="Vertical">
+                                        <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand">
+                                            <Label Text="{Binding title}"
+                                                    TextColor="#f35e20" />
+                                            <Label Text="{Binding subtitle}"
+                                                    TextColor="#503026" 
+                                                   LineBreakMode="NoWrap"/>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+                </Frame>
+            </Frame>
+        </StackLayout>
+
+        <ContentView x:Name="popupPlayerView" BackgroundColor="#C0808080" Padding="10, 0" IsVisible="False" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+            <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                <StackLayout Orientation="Horizontal" HeightRequest="80" WidthRequest="360" BackgroundColor="White">
+                    <ImageButton Source="{Binding PImage}" WidthRequest="50" Command="{Binding Pause}"></ImageButton>
+                    <Label Text="{Binding Progress}" VerticalOptions="CenterAndExpand" TextColor="Black"></Label>
+                    <Slider HorizontalOptions="FillAndExpand" Maximum="{Binding SliderMax}" Value="{Binding SliderVal}" InputTransparent="True" MaximumTrackColor="Black" MinimumTrackColor="Black"></Slider>
+                    <ImageButton Source="x.png" WidthRequest="50" Command="{Binding Stop}"></ImageButton>
+                </StackLayout>
+            </StackLayout>
+        </ContentView>
+        
+
+    </AbsoluteLayout>
+</ContentView>

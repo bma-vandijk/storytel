@@ -1,0 +1,54 @@
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Storytime"
+             x:Class="Storytime.RecorderView"
+             xmlns:mvvm="clr-namespace:Storytime.MVVM"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms">
+    <ContentPage.BindingContext>
+        <mvvm:RecorderVM/>
+    </ContentPage.BindingContext>
+    
+    <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+
+        <Image Source="background.png" 
+                     AbsoluteLayout.LayoutBounds="0, 0, 1, 1" 
+                     AbsoluteLayout.LayoutFlags="All" 
+                     Aspect="AspectFill"></Image>
+
+        <StackLayout AbsoluteLayout.LayoutBounds="0, 0, 1, 1" 
+               AbsoluteLayout.LayoutFlags="All" 
+               VerticalOptions="Center"
+               HorizontalOptions="Center">
+            <ffimageloading:CachedImage Source="{Binding Character}"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"
+                     WidthRequest="200"
+                     HeightRequest="250"
+                     />
+        </StackLayout>
+
+        <StackLayout VerticalOptions="End"
+                     HorizontalOptions="Center"
+                     Padding="20"
+                     AbsoluteLayout.LayoutBounds="0, 0, 1, 1" 
+                     AbsoluteLayout.LayoutFlags="All">
+            <Frame Padding="15, 5">
+                <Label Text="{Binding RecordText}"
+                       HorizontalOptions="Center"
+                       TextColor="Black"
+                       FontSize="16"
+                       FontAttributes="Bold"></Label>
+            </Frame>
+
+            <ImageButton x:Name="RecordButton"
+                     Source="{Binding MicIcon}"
+                     WidthRequest="50"
+                     HeightRequest="50"
+                     BorderColor="Transparent"
+                     BackgroundColor="Transparent"
+                     Command="{Binding Record}"></ImageButton>
+        </StackLayout>
+
+
+    </AbsoluteLayout>
+</ContentView>

@@ -1,0 +1,36 @@
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Storytime"
+             x:Class="Storytime.LoginView">
+    <AbsoluteLayout Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+        <Image Source="background.png" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All" Aspect="AspectFill"/>
+
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+
+            <Frame CornerRadius="20" BackgroundColor="#001158" Padding="20">
+                <StackLayout WidthRequest="360" HeightRequest="300">
+                    <Label Text="Log in" TextColor="#FFFFFF" FontSize = "24"  />
+
+                    <StackLayout Spacing="0">
+                        <Label Text="Email:" TextColor="#FFFFFF" FontSize = "18" />
+                        <Entry Placeholder="Email" TextColor="#cccccc" Keyboard="Email" IsSpellCheckEnabled="false" ReturnType="Next" />
+                    </StackLayout>
+
+                    <StackLayout Spacing="0">
+                        <Label Text="Wachtwoord:" TextColor="#FFFFFF" FontSize = "18" />
+                        <Entry Placeholder="Wachtwoord" TextColor="#cccccc" IsSpellCheckEnabled="false" IsPassword="true" ReturnType="Done" />
+                    </StackLayout>
+
+                    <Button Text="Inloggen"
+                            BackgroundColor="#FFFFFF" 
+                            HorizontalOptions="FillAndExpand"
+                            Clicked="OnButtonClicked" />
+                </StackLayout>
+            </Frame>
+
+        </StackLayout>
+
+
+    </AbsoluteLayout>
+</ContentView>

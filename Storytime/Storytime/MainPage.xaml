@@ -1,0 +1,25 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Storytime"
+             x:Class="Storytime.MainPage"
+             xmlns:mvvm="clr-namespace:Storytime.MVVM">
+
+    <ContentPage.BindingContext>
+        <mvvm:MainPageVM/>
+    </ContentPage.BindingContext>
+
+    <!-- Root container of the page -->
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <local:ViewHost ActiveView="{Binding ActiveView}"/>
+
+        <!--<Button Grid.Row="1" Command="{Binding SwapCommand}"/>-->
+
+    </Grid>
+
+</ContentPage>

@@ -1,0 +1,8 @@
+﻿<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Storytime.ViewHost">
+    <Grid>
+        <ContentView x:Name="OldView"/>
+        <ContentView x:Name="NewView"/>
+    </Grid>
+</ContentView>
