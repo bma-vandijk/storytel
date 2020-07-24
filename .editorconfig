@@ -1,0 +1,60 @@
+
+# Storytime code conventions
+
+# Top level editorconfig
+root = true
+
+# CSharp conventions
+[*.cs]
+
+# Sorteer imports en usings op System.[namespaces] first
+dotnet_sort_system_directives_first                                     = true
+
+# Avoid gebruik van this.
+dotnet_style_qualification_for_field                                    = false : suggestion
+dotnet_style_qualification_for_property                                 = false : suggestion
+dotnet_style_qualification_for_method                                   = false : suggestion
+dotnet_style_qualification_for_event                                    = false : suggestion
+
+# const upper case altijd
+dotnet_naming_rule.consts_must_be_all_caps.symbols                      = const_symbols
+dotnet_naming_symbols.const_symbols.applicable_kinds                    = *
+dotnet_naming_symbols.const_symbols.applicable_accessibilities          = *
+dotnet_naming_symbols.const_symbols.required_modifiers                  = const
+dotnet_naming_rule.consts_must_be_all_caps.style                        = const_caps_style
+dotnet_naming_style.const_caps_style.capitalization                     = all_upper
+dotnet_naming_style.const_caps_style.word_separator                     = _
+dotnet_naming_rule.consts_must_be_all_caps.severity                     = none
+
+# publics pascal case
+dotnet_naming_rule.publics_must_be_pascal_case.symbols                  = public_symbols
+dotnet_naming_symbols.public_symbols.applicable_kinds                   = property, enum, method, field, event
+dotnet_naming_symbols.public_symbols.applicable_accessibilities         = public
+dotnet_naming_rule.publics_must_be_pascal_case.style                    = public_capitalized_style
+dotnet_naming_style.public_capitalized_style.capitalization             = pascal_case
+dotnet_naming_rule.publics_must_be_pascal_case.severity                 = suggestion
+
+# privates camel case en prepended met '_'
+dotnet_naming_rule.privates_must_camel_and_underscore.symbols           = private_field_symbols
+dotnet_naming_symbols.private_field_symbols.applicable_kinds            = field, event, delegate
+dotnet_naming_symbols.private_field_symbols.applicable_accessibilities  = private
+dotnet_naming_rule.privates_must_camel_and_underscore.style             = private_underscored_style
+dotnet_naming_style.private_underscored_style.capitalization            = camel_case
+dotnet_naming_style.private_underscored_style.required_prefix           = _
+dotnet_naming_rule.privates_must_camel_and_underscore.severity          = suggestion
+
+# private/protected methods camel case zonder '_'
+dotnet_naming_rule.private_methods_camelcase.symbols                    = private_method_symbols
+dotnet_naming_symbols.private_method_symbols.applicable_kinds           = property, method
+dotnet_naming_symbols.private_method_symbols.applicable_accessibilities = private, protected
+dotnet_naming_rule.private_methods_camelcase.style                      = private_camelcase_style
+dotnet_naming_style.private_camelcase_style.capitalization              = camel_case
+dotnet_naming_rule.private_methods_camelcase.severity                   = suggestion
+
+# parameters pascal case en prepended met 'p'
+dotnet_naming_rule.parameter_prefixed.symbols                           = parameter_prefix_symbols
+dotnet_naming_symbols.parameter_prefix_symbols.applicable_kinds         = parameter
+dotnet_naming_rule.parameter_prefixed.style                             = parameter_prefixed_style
+dotnet_naming_style.parameter_prefixed_style.capitalization             = pascal_case
+dotnet_naming_style.parameter_prefixed_style.required_prefix            = p
+dotnet_naming_rule.parameter_prefixed.severity                          = suggestion
